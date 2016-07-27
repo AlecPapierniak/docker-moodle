@@ -16,7 +16,8 @@ if [ ! -f /var/www/html/config.php ]; then
   sed -e "s/pgsql/mysqli/
   s/username/moodle/
   s/password/$MOODLE_PASSWORD/
-  s/example.com\/moodle/$VIRTUAL_HOST/
+  s/http:\/\/example.com\/moodle/https:\/\/$VIRTUAL_HOST/
+  s/\(^.*sslproxy.*$\)/\$CFG->sslproxy = true;/
   s/\/home\/example\/moodledata/\/var\/moodledata/" /var/www/html/config-dist.php > /var/www/html/config.php
 
   chown www-data:www-data /var/www/html/config.php
