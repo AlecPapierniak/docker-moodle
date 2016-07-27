@@ -1,5 +1,7 @@
 Simple (and ugly!) Dockerfile for a Moodle install.
 
+This is based on work done by Serio Gomez. Original repo can be found here: https://github.com/sergiogomez/docker-moodle
+
 Clone this repo, then: 
 
 	docker build -t="moodle-base" .
