@@ -26,6 +26,5 @@ RUN chown -R www-data:www-data /var/www/html
 RUN mkdir /var/moodledata
 RUN chown -R www-data:www-data /var/moodledata; chmod 777 /var/moodledata
 RUN chmod 755 /start.sh /etc/apache2/foreground.sh
-RUN /start.sh
 
 EXPOSE 22 80
