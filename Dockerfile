@@ -25,4 +25,4 @@ RUN dpkg-divert --local --rename --add /sbin/initctl && \
 	chown -R www-data:www-data /var/moodledata; chmod 777 /var/moodledata && \
 	chmod 755 /start.sh /etc/apache2/foreground.sh
 
-EXPOSE 22 80
+EXPOSE 80
